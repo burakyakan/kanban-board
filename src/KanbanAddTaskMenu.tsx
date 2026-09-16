@@ -1,9 +1,9 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-function KanbanAddTask() {
+function KanbanAddTaskMenu() {
 
-  
+
   return (
     <div>
       <div className="flex items-center gap-4">
@@ -15,4 +15,4 @@ function KanbanAddTask() {
   );
 }
 
-export default KanbanAddTask
+export default KanbanAddTaskMenu

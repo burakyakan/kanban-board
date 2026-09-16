@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "Wash the dishes",
+    "status": "Backlog",
+    "createdAt": "14.09.2026 14:00",
+    "updatedAt": "14.09.2026 14:30"
+  },
+  {
+    "id": "2",
+    "title": "Walk the dog",
+    "status": "To-Do",
+    "createdAt": "14.09.2026 14:00",
+    "updatedAt": "14.09.2026 14:30"
+  },
+  {
+    "id": "3",
+    "title": "Eat Food",
+    "status": "To-Do",
+    "createdAt": "14.09.2026 14:00",
+    "updatedAt": "14.09.2026 14:30"
+  },
+  {
+    "id": "4",
+    "title": "Do Groceries",
+    "status": "Done",
+    "createdAt": "14.09.2026 14:00",
+    "updatedAt": "14.09.2026 14:30"
+  }
+]
