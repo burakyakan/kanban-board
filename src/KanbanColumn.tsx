@@ -16,7 +16,7 @@ function KanbanColumn(props: KanbanColumnProps) {
 
   return (
     <div ref={ref} className="Column">
-      <Card className="p-5 rounded-4xl w-80 min-h-78" style={{ backgroundColor: props.bgColor }}>
+      <Card className="p-5 rounded-4xl w-80 min-h-71" style={{ backgroundColor: props.bgColor }}>
         <CardHeader>
           <CardTitle className="text-center font-bold text-2xl" style={{ color: props.accentColor }}>
             {props.columnTitle}
@@ -24,7 +24,7 @@ function KanbanColumn(props: KanbanColumnProps) {
         </CardHeader>
 
         <div className="flex flex-col gap-5">
-          {props.tasks.map(({ id, title, status, createdAt, updatedAt }, index) => (
+          { props.tasks.map(({ id, title, status, createdAt, updatedAt }, index) => (
             <KanbanTask
               key={id}
               id={id}

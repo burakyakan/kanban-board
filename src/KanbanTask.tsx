@@ -3,6 +3,8 @@ import { Badge } from "./components/ui/badge";
 import { Button } from "@base-ui/react/button";
 import { useSortable } from "@dnd-kit/react/sortable";
 
+import {Trash} from 'lucide-react';
+
 import type { Task, KanbanColumnProps } from "@/types/kanban.ts";
 
 
@@ -12,13 +14,24 @@ function KanbanTask({ id, status, title, updatedAt, createdAt, index }: KanbanTa
 
   const { ref, isDragging } = useSortable({ id, index, type: "Task", accept: "Task" });
 
+  function getBadgeColor(status: string) {
+
+    if (status === "Backlog") return 'bg-red-400';
+    if (status === "To-Do") return 'bg-blue-400';
+    if (status === "In Progress") return 'bg-orange-400';
+    if (status === "Done") return 'bg-green-500';
+
+      return 'bg-gray-500';
+
+  }
+
   return (
-    <div ref={ref} data-dragging={isDragging}
-      className={'Task'}>
-      <Card key={id} id={id} className="bg-white flex items-center">
+    <div ref={ref} className={`${isDragging ? 'opacity-60' : ''}`}>
+      <Card key={id} id={id} className="bg-white flex items-center cursor-grab">
         <CardHeader className="flex items-center">
-          <Badge>{status}</Badge>
-          <Button className="bg-red-400 rounded-xl w-25">Delete Task</Button>
+          <Badge className={getBadgeColor(status)}>{status}</Badge>
+          <Button className="bg-gray-400 hover:bg-gray-500 rounded-xl h-5 pl-2 pr-2"><Trash size={16} color="white" /></Button>
+          <p>{index + 1}</p>
         </CardHeader>
         <CardContent className="text-2xl">
           <p>{title} + {id}</p>
