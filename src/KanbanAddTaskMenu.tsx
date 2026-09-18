@@ -7,7 +7,7 @@ function KanbanAddTaskMenu() {
   return (
     <div>
       <div className="flex items-center gap-4">
-        <Input type="text" placeholder="Add a task..." className="max-w-md" />
+        <Input type="text" placeholder="Add a task..." className="max-w-md w-3xl" />
         <Button>Add Task</Button>
       </div>
     </div>
